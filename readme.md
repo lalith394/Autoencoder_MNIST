@@ -25,6 +25,11 @@ The autoencoder architecture is composed of:
 - Easily extendable to other image datasets
 
 ---
+## 📤 Outputs
+- `trained_models/model2` was trained for `240` epochs and attained a final loss of `0.0160`.
+- The model attained a evaluation loss of `0.018172`.
+- The visualization of some evaluation is stored under `results` directory.
+![Recreation Visualization](./results/visualization.png)
 
 ## 🚀 Getting Started
 
