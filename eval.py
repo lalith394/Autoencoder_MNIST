@@ -6,6 +6,11 @@ import torch.nn as nn
 import matplotlib.pyplot as plt
 from model import AutoEncoder_MNIST
 from tqdm import tqdm
+import os
+
+output_visualizations_directory = "results"
+if not os.path.exists(output_visualizations_directory):
+    os.makedirs(output_visualizations_directory)
 
 """ Visualization of predictions """
 def visualize_reconstructions(model, test_loader, device):
@@ -34,12 +39,13 @@ def visualize_reconstructions(model, test_loader, device):
         plt.axis('off')
 
     plt.tight_layout()
+    plt.savefig('results/visualization.png')
     plt.show()
 
 # --- Config ---
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 batch_size = 64
-model_path = 'tained_models/model2.pth'
+model_path = 'trained_models/model2.pth'
 
 # --- Load test data ---
 transform = transforms.Compose([transforms.ToTensor()])
