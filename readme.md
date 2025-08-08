@@ -12,7 +12,7 @@ The autoencoder architecture is composed of:
 - **Dense Bottleneck**: Linear → 10 neurons → Linear → reshape
 - **Decoder**: 3 transposed convolutional layers
 
-![Model Architecture](./architecture.png) 
+![Model Architecture](./auto_encoder_mnist_architecture.png) 
 
 ---
 
